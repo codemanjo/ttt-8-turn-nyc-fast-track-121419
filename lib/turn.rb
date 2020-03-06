@@ -1,21 +1,54 @@
- board= [""," "," "," "," "," "," "," "]
-puts "Welcome to Tic Tac Toe"
+def ground_shipping(weight)
+ if  weight <= 2:
+   price_per_pound = 1.50
+ elif weight <= 6 :
+   price_per_pound = 3.00
+ elif weight <= 10:
+   price_per_pound = 4.00
+ else
+   price_per_pound= 4.75
+ 
+ return 20 + (price_per_pound * weight)
 
-def display_board (board)
-  puts "#{board[0]} | #{board[1]} | #{board[2]}"
-  puts "-----------"
-  puts "#{board[3]} | #{board[4]} | #{board[5]}"
-  puts "-----------"
-  puts "#{board[6]} | #{board[7]} | #{board[8]}"
+print(ground_shipping(4))
+
+premium_shipping_cost = 125
+
 end
 
-display_board(board)
+def drone_shipping(weight)
+ if  weight <= 2
+   price_per_pound = 4.50
+ elif weight <= 6 
+   price_per_pound = 9.00
+ elif weight <= 10
+   price_per_pound = 12.00
+ else
+   price_per_pound= 14.25
+   
+ return price_per_pound * weight
 
-def turn(board)
-  puts "Please enter 1-9"
-end
+print(drone_shipping(4))
 
-turn(board)
+end 
 
-def valid_move?(board,index)
-end
+def cheapest_shipping(weight):
+  ground = ground_shipping(weight)
+  premium = premium_shipping_cost
+  drone = drone_shipping(weight)
+
+ if ground < premium or ground < drone:
+   method = "Standard ground"
+   cost = ground
+ elif premium < ground or premium < drone:
+   method= "Premium ground"
+   cost= premium
+ else:
+   method = "drone"
+   drone= drone_shipping
+ 
+   print("The cheapest option available is  with  shipping.")
+ end     
+
+ cheapest_shipping(5)
+ cheapest_shipping(41.8)
