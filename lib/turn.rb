@@ -7,7 +7,7 @@ def ground_shipping(weight)
    price_per_pound = 4.00
  else
    price_per_pound= 4.75
- 
+
  return 20 + (price_per_pound * weight)
 
 print(ground_shipping(4))
@@ -19,18 +19,18 @@ end
 def drone_shipping(weight)
  if  weight <= 2
    price_per_pound = 4.50
- elif weight <= 6 
+ elif weight <= 6
    price_per_pound = 9.00
  elif weight <= 10
    price_per_pound = 12.00
  else
    price_per_pound= 14.25
-   
+
  return price_per_pound * weight
 
 print(drone_shipping(4))
 
-end 
+end
 
 def cheapest_shipping(weight):
   ground = ground_shipping(weight)
@@ -46,9 +46,9 @@ def cheapest_shipping(weight):
  else:
    method = "drone"
    drone= drone_shipping
- 
+
    print("The cheapest option available is  with  shipping.")
- end     
+ end
 
  cheapest_shipping(5)
  cheapest_shipping(41.8)
