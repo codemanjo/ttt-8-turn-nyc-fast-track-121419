@@ -45,9 +45,9 @@ def cheapest_shipping(weight):
    cost= premium
  else:
    method = "drone"
-   drone= drone_shipping
+   cost= drone_shipping
 
-   print("The cheapest option available is  with  shipping.")
+   print("The cheapest option is #{method} shipping and it would cost #{cost}.")
  end
 
  cheapest_shipping(5)
